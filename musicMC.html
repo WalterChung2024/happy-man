@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Pop quiz</title>
+    <p id="timer">5m 0s</p>
+
+    <script >
+
+    const timeInMinutes = 5;
+    const currentTime = Date.parse(new Date());
+    var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "TIME IS UP! Turn in your quiz!";
+      }
+    }, 1000);
+    </script>
+
+<script language="JavaScript" type="text/javascript" src="quiz.js">
+</script>
+  </head>
+  <h1 id="header1"> Music Multiple Choice Quiz<h1>
+    <body bgcolor= #87CEFA>
+    <form name="quiz" id="quiz">
+      <div>
+          <p>1. What was Justin Beiber's first single that he released in July 2009, which quickly climbed the pop singles charts in the U.S and Canada? </p>
+          <p><input type= "radio" name= "question1" value="A, Baby">A. Baby</p>
+          <p><input type= "radio" name= "question1" value="B, One Time">B. One Time</p>
+          <p><input type= "radio" name= "question1" value="C, Love Me">C. Love Me</p>
+          <p><input type= "radio" name= "question1" value="D, Pray">D. Pray</p> <BR>
+        </div>
+                      <!--B, One Time   -->
+        <div>
+            <p>2. By 2019, which math symbol has Ed Sheeran NOT used as an album title? </p>
+            <p><input type= "radio" name= "question2" value="A, +">A. +</p>
+            <p><input type= "radio" name= "question2" value="B, -">B. -</p>
+            <p><input type= "radio" name= "question2" value="C, x">C. x</p>
+            <p><input type= "radio" name= "question2" value="D, ÷">D. ÷</p> <BR>
+          </div>
+                        <!-- B, -   -->
+          <div>
+              <p>3.   </p> Fill in the blank for this popular Shawn Mendes song released in 2018 "In my ____"
+              <p><input type= "radio" name= "question3" value="A, Blood">A. Blood</p>
+              <p><input type= "radio" name= "question3" value="B, Life">B. Life</p>
+              <p><input type= "radio" name= "question3" value="C, Mind">C. Mind</p>
+              <p><input type= "radio" name= "question3" value="D, Heart">D. Heart</p> <BR>
+            </div>
+                            <!-- A, Blood   -->
+            <div>
+                <p>4. What was the name of the song Billie Eilish uploaded to SoundCloud in 2016 that caused her to gain media attention? </p>
+                <p><input type= "radio" name= "question4" value="A, Ocean Eyes">A. Ocean Eyes</p>
+                <p><input type= "radio" name= "question4" value="B, Bad Guy">B. Bad Guy</p>
+                <p><input type= "radio" name= "question4" value="C, Bellyache">C. Bellyache</p>
+                <p><input type= "radio" name= "question4" value="D, Bury a Friend">D. Bury a Friend</p> <BR>
+              </div>
+                            <!-- A, Ocean Eyes   -->
+              <div>
+                  <p>5. Which country does the band BTS come from? </p>
+                  <p><input type= "radio" name= "question5" value="A, China">A. China</p>
+                  <p><input type= "radio" name= "question5" value="B, Japan">B. Japan</p>
+                  <p><input type= "radio" name= "question5" value="C, North Korea">C. North Korea</p>
+                  <p><input type= "radio" name= "question5" value="D, South Korea">D. South Korea</p> <BR>
+                </div>
+                          <!--D, South Korea    -->
+                <div>
+                    <p>6. Which of these is NOT a Shawn Mendes song? </p>
+                    <p><input type= "radio" name= "question6" value="A, Fallin' All In You">A. Fallin' All In You</p>
+                    <p><input type= "radio" name= "question6" value="B, Shape of You">B. Shape of You</p>
+                    <p><input type= "radio" name= "question6" value="C, If I Can't Have You">C. If I Can't Have You</p>
+                    <p><input type= "radio" name= "question6" value="D, Nervous">D. Nervous</p> <BR>
+                  </div>
+                                <!--  B, Shape of You  -->
+                  <div>
+                      <p> 7. What is Ariana Grande's nationality? </p>
+                      <p><input type= "radio" name= "question7" value="A, American">A. American</p>
+                      <p><input type= "radio" name= "question7" value="B, Italian">B. Italian</p>
+                      <p><input type= "radio" name= "question7" value="C, Spanish">C. Spanish</p>
+                      <p><input type= "radio" name= "question7" value="D, Arabic">D. Arabic</p> <BR>
+                    </div>
+                                    <!-- A, American   -->
+                    <div>
+                        <p> 8. Who sings the song "Sweet but Physco? </p>
+                        <p><input type= "radio" name= "question8" value="A, Ariana Grande">A. Ariana Grande</p>
+                        <p><input type= "radio" name= "question8" value="B, Selena Gomez">B. Selena Gomez</p>
+                        <p><input type= "radio" name= "question8" value="C, Katy Perry">C. Katy Perry</p>
+                        <p><input type= "radio" name= "question8" value="D, Ava Max">D. Ava Max</p> <BR>
+                      </div>
+                                        <!-- D, Ava Max   -->
+                      <div>
+                          <p> 9. What is Halsey's real first name? </p>
+                          <p><input type= "radio" name= "question9" value="A, Melanie">A. Melanie</p>
+                          <p><input type= "radio" name= "question9" value="B, Rebecca">B. Rebecca</p>
+                          <p><input type= "radio" name= "question9" value="C, Ashley">C. Ashley</p>
+                          <p><input type= "radio" name= "question9" value="D, Christina">D. Christina</p> <BR>
+                        </div>
+                                        <!--  C, Ashley     -->
+                        <div>
+                            <p> 10. Who is the lead vocalist for the band Maroon 5? </p>
+                            <p><input type= "radio" name= "question10" value="A, Dan Reynolds">A. Dan Reynolds</p>
+                            <p><input type= "radio" name= "question10" value="B, Ryan Tedder">B. Ryan Tedder</p>
+                            <p><input type= "radio" name= "question10" value="C, James Valentine">C. James Valentine</p>
+                            <p><input type= "radio" name= "question10" value="D, Adam Levine">D. Adam Levine</p> <BR>
+                          </div>
+                                        <!--D, Adam Levine    -->
+
+
+    <input type="button" id="button" name="" value="Submit" onclick="check5()"> <BR>
+
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+ <a href="Index.html"  > Click here go to go back to the first page </a>
+ <BR>
+<!-- <a href="quizpage3.html"  > Click here go to go to the third page </a> -->
+</form>
+
+    </body>
+
+
+</html>

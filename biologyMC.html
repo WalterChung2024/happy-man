@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Pop quiz</title>
+    <p id="timer">5m 0s</p>
+
+    <script>
+
+    const timeInMinutes = 5;
+    const currentTime = Date.parse(new Date());
+    var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "TIME IS UP! Turn in your quiz!";
+      }
+    }, 1000);
+    </script>
+
+<script language="JavaScript" type="text/javascript" src="quiz.js">
+</script>
+  </head>
+
+  <h1 id="header1"> Biology Multiple Choice Quiz<h1>
+    <body bgcolor= #87CEFA>
+    <form name="quiz" id="quiz">
+      <div>
+          <p>1. What is the most common element in the human body? </p>
+          <p><input type= "radio" name= "question1" value="A, oxygen">A. oxygen</p>
+          <p><input type= "radio" name= "question1" value="B, calcium">B. calcium</p>
+          <p><input type= "radio" name= "question1" value="C, carbon">C. carbon</p>
+          <p><input type= "radio" name= "question1" value="D, hydrogen">D. hydrogen</p> <BR>
+        </div>
+  <!--A, oxygen    -->
+        <div>
+            <p>2. What is the scientific term for the production of light by living organisms? </p>
+            <p><input type= "radio" name= "question2" value="A, cellular respiration">A. cellular respiration</p>
+            <p><input type= "radio" name= "question2" value="B, photosynthesis">B. photosynthesis</p>
+            <p><input type= "radio" name= "question2" value="C, bioluminescence">C. bioluminescence</p>
+            <p><input type= "radio" name= "question2" value="D, biosynthesis">D. biosynthesis</p> <BR>
+          </div>
+        <!-- C, bioluminescence   -->
+          <div>
+              <p>3.  What human organ cleans fifty gallons of blood every day? </p>
+              <p><input type= "radio" name= "question3" value="A, heart">A. heart</p>
+              <p><input type= "radio" name= "question3" value="B, stomach">B. stomach</p>
+              <p><input type= "radio" name= "question3" value="C, kidneys">C. kidneys</p>
+              <p><input type= "radio" name= "question3" value="D, liver">D. liver</p> <BR>
+            </div>
+  <!--C, kidneys   -->
+            <div>
+                <p>4. What illness accounted for 40 percent of U.S military casualties during World War I? </p>
+                <p><input type= "radio" name= "question4" value="A, syphilis">A. syphilis</p>
+                <p><input type= "radio" name= "question4" value="B, the flu">B. the flu</p>
+                <p><input type= "radio" name= "question4" value="C, smallpox">C. smallpox</p>
+                <p><input type= "radio" name= "question4" value="D, gangrene">D. gangrene</p> <BR>
+              </div>
+  <!--   B, the flu -->
+              <div>
+                  <p>5. Which of the following has more bones? </p>
+                  <p><input type= "radio" name= "question5" value="A, adult">A. adult</p>
+                  <p><input type= "radio" name= "question5" value="B, baby">B. baby</p>
+                  <p><input type= "radio" name= "question5" value="C, all are the same">C. all are the same</p>
+                  <p><input type= "radio" name= "question5" value="D, teenager">D. teenager</p> <BR>
+                </div>
+  <!--B, baby    -->
+                <div>
+                    <p>6. What was the first genetically engineered organism?</p>
+                    <p><input type= "radio" name= "question6" value="A, rat">A. rat</p>
+                    <p><input type= "radio" name= "question6" value="B, sheep">B. sheep</p>
+                    <p><input type= "radio" name= "question6" value="C, corn">C. corn</p>
+                    <p><input type= "radio" name= "question6" value="D, tobacco">D. tobacco</p> <BR>
+                  </div>
+  <!-- D, tobacco   -->
+                  <div>
+                      <p> 7. What is the only human body part that can't repair itself? </p>
+                      <p><input type= "radio" name= "question7" value="A, eyes">A. eyes</p>
+                      <p><input type= "radio" name= "question7" value="B, liver">B. liver</p>
+                      <p><input type= "radio" name= "question7" value="C, brain">C. brain</p>
+                      <p><input type= "radio" name= "question7" value="D, teeth">D. teeth</p> <BR>
+                    </div>
+  <!--  D, teeth  -->
+                    <div>
+                        <p> 8. Which of the following has the longest recorded life span? </p>
+                        <p><input type= "radio" name= "question8" value="A, termite">A. termite</p>
+                        <p><input type= "radio" name= "question8" value="B, elephant">B. elephant</p>
+                        <p><input type= "radio" name= "question8" value="C, chimpanzee">C. chimpanzee</p>
+                        <p><input type= "radio" name= "question8" value="D, oyster">D. oyster</p> <BR>
+                      </div>
+  <!-- D, oyster   -->
+                      <div>
+                          <p> 9. Unlike most other fish, sharks have no    ? </p>
+                          <p><input type= "radio" name= "question9" value="A, gills">A. gills</p>
+                          <p><input type= "radio" name= "question9" value="B, heart">B. heart</p>
+                          <p><input type= "radio" name= "question9" value="C, bones">C. bones</p>
+                          <p><input type= "radio" name= "question9" value="D, liver">D. liver</p> <BR>
+                        </div>
+  <!-- C, bones  -->
+                        <div>
+                            <p> 10. Which organ do insects NOT have? </p>
+                            <p><input type= "radio" name= "question10" value="A, brain">A. brain</p>
+                            <p><input type= "radio" name= "question10" value="B, stomach">B. stomach</p>
+                            <p><input type= "radio" name= "question10" value="C, lungs">C. lungs</p>
+                            <p><input type= "radio" name= "question10" value="D, heart">D. heart</p> <BR>
+                          </div>
+  <!-- C, lungs   -->
+
+
+  <div class="a">
+    <button class="b"  onclick="check2()"> Submit  </button>
+    </div>
+
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+ <a href="Index.html"  > Click here go to go back to the first page </a>
+ <BR>
+<!-- <a href="quizpage3.html"  > Click here go to go to the third page </a> -->
+</form>
+
+    </body>
+</html>

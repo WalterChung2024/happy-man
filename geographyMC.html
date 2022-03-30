@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Pop quiz</title>
+    <p id="timer">5m 0s</p>
+
+    <script>
+
+    const timeInMinutes = 5;
+    const currentTime = Date.parse(new Date());
+    var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "TIME IS UP! Turn in your quiz!";
+      }
+    }, 1000);
+    </script>
+
+<script language="JavaScript" type="text/javascript" src="quiz.js">
+</script>
+  </head>
+  <h1 id="header1"> Geography Multiple Choice Quiz<h1>
+    <body bgcolor= #87CEFA>
+    <form name="quiz" id="quiz">
+
+      <div>
+          <p>1. Which of these seas borders Italy? </p>
+          <p><input type= "radio" name= "question1" value="A, Red Sea">A. Red Sea</p>
+          <p><input type= "radio" name= "question1" value="B, Adriatic Sea">B. Adriatic Sea</p>
+          <p><input type= "radio" name= "question1" value="C, Caspian Sea">C. Caspian Sea</p>
+          <p><input type= "radio" name= "question1" value="D, Black Sea">D. Black sea</p> <BR>
+        </div>
+  <!--Adriatic Sea    -->
+        <div>
+            <p>2. Which of these countries is on the Equator? </p>
+            <p><input type= "radio" name= "question2" value="A, Austrailia">A. Austrailia</p>
+            <p><input type= "radio" name= "question2" value="B, Democratic Republic of the Congo">B. Democratic Republic of the Congo</p>
+            <p><input type= "radio" name= "question2" value="C, Mexico">C. Mexico</p>
+            <p><input type= "radio" name= "question2" value="D, Egypt">D. Egypt</p> <BR>
+          </div>
+        <!-- Democratic Republic of the Congo   -->
+          <div>
+              <p>3.  Which of these countries is part of the European Union? </p>
+              <p><input type= "radio" name= "question3" value="A, Switzerland">A. Switzerland</p>
+              <p><input type= "radio" name= "question3" value="B, Poland">B. Poland</p>
+              <p><input type= "radio" name= "question3" value="C, Turkey">C. Turkey</p>
+              <p><input type= "radio" name= "question3" value="D, Georgia">D. Georgia</p> <BR>
+            </div>
+  <!--Poland    -->
+            <div>
+                <p>4. Which of these countries has a king? </p>
+                <p><input type= "radio" name= "question4" value="A, Mexico">A. Mexico</p>
+                <p><input type= "radio" name= "question4" value="B, Italy">B. Italy</p>
+                <p><input type= "radio" name= "question4" value="C, Jordan">C. Jordan</p>
+                <p><input type= "radio" name= "question4" value="D, Egypt">D. Egypt</p> <BR>
+              </div>
+  <!--   Jordan -->
+              <div>
+                  <p>5. Which of these cities is in Scotland? </p>
+                  <p><input type= "radio" name= "question5" value="A, Cardiff">A. Cardiff</p>
+                  <p><input type= "radio" name= "question5" value="B, Bristol">B. Bristol</p>
+                  <p><input type= "radio" name= "question5" value="C, York">C. York</p>
+                  <p><input type= "radio" name= "question5" value="D, Aberdeen">D. Aberdeen</p> <BR>
+                </div>
+  <!--Aberdeen    -->
+                <div>
+                    <p>6. Which of these countries has the largest population?</p>
+                    <p><input type= "radio" name= "question6" value="A, Iran">A. Iran</p>
+                    <p><input type= "radio" name= "question6" value="B, Russia">B. Russia</p>
+                    <p><input type= "radio" name= "question6" value="C, Germany">C. Germany</p>
+                    <p><input type= "radio" name= "question6" value="D, Brazil">D. Brazil</p> <BR>
+                  </div>
+  <!-- Brazil   -->
+                  <div>
+                      <p> 7. Which of these rivers flows past the most countries? </p>
+                      <p><input type= "radio" name= "question7" value="A, Danube">A. Danube</p>
+                      <p><input type= "radio" name= "question7" value="B, Euphrates">B. Euphrates</p>
+                      <p><input type= "radio" name= "question7" value="C, Amazon">C. Amazon</p>
+                      <p><input type= "radio" name= "question7" value="D, Mississippi">D. Mississippi</p> <BR>
+                    </div>
+  <!--  Danube  -->
+                    <div>
+                        <p> 8. Which of these U.S. states has the largest area? </p>
+                        <p><input type= "radio" name= "question8" value="A, Florida">A. Florida</p>
+                        <p><input type= "radio" name= "question8" value="B, California">B. California</p>
+                        <p><input type= "radio" name= "question8" value="C, New York">C. New York</p>
+                        <p><input type= "radio" name= "question8" value="D, Nebraska">D. Nebraska</p> <BR>
+                      </div>
+  <!-- California   -->
+                      <div>
+                          <p> 9. Which of these bodies of water has the largest surface area? </p>
+                          <p><input type= "radio" name= "question9" value="A, Gulf of Mexico">A. Gulf of Mexico</p>
+                          <p><input type= "radio" name= "question9" value="B, Black Sea">B. Black Sea</p>
+                          <p><input type= "radio" name= "question9" value="C, Red Sea">C. Red Sea</p>
+                          <p><input type= "radio" name= "question9" value="D, Persian Gulf">D. Persian Gulf</p> <BR>
+                        </div>
+  <!-- Gulf of Mexico    -->
+                        <div>
+                            <p> 10. Out of these countries, which one is the oldest? </p>
+                            <p><input type= "radio" name= "question10" value="A, Vietnam">A. Vietnam</p>
+                            <p><input type= "radio" name= "question10" value="B, South Korea">B. South Korea</p>
+                            <p><input type= "radio" name= "question10" value="C, Kenya">C. Kenya</p>
+                            <p><input type= "radio" name= "question10" value="D, Poland">D. Poland</p> <BR>
+                          </div>
+  <!-- Japan   -->
+
+<div class="a">
+  <button class="b"  onclick="check()"> Submit  </button>
+  </div>
+    <!--    <input type="button" id="button" name="" value="Submit" onclick="check()"> <BR> -->
+</div>
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+ <a href="Index.html"  > Click here go to go back to the first page </a>
+ <BR>
+<!-- <a href="quizpage3.html"  > Click here go to go to the third page </a> -->
+</form>
+
+    </body>
+</html>

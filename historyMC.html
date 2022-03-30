@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Pop quiz</title>
+    <p id="timer">5m 0s</p>
+
+    <script>
+
+    const timeInMinutes = 5;
+    const currentTime = Date.parse(new Date());
+    var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "TIME IS UP! Turn in your quiz!";
+      }
+    }, 1000);
+    </script>
+
+<script language="JavaScript" type="text/javascript" src="quiz.js">
+</script>
+  </head>
+  <h1 id="header1"> History Multiple Choice Quiz<h1>
+    <body bgcolor= #87CEFA>
+    <form name="quiz" id="quiz">
+      <div>
+          <p>1.  Where was the Mayan civilization based? </p>
+          <p><input type= "radio" name= "question1" value="A, Yucatan peninsula">A. Yucatan peninsula</p>
+          <p><input type= "radio" name= "question1" value="B, California">B. California</p>
+          <p><input type= "radio" name= "question1" value="C, Peru">C. Peru</p>
+          <p><input type= "radio" name= "question1" value="D, Southern Africa">D. Southern Africa</p> <BR>
+        </div>
+  <!-- A, Yucatan peninsula  -->
+        <div>
+            <p>2. Where was the Constitutional Convention held?  </p>
+            <p><input type= "radio" name= "question2" value="A, Boston">A. Boston</p>
+            <p><input type= "radio" name= "question2" value="B, Las Vegas">B. Las Vegas</p>
+            <p><input type= "radio" name= "question2" value="C, New York">C. New York</p>
+            <p><input type= "radio" name= "question2" value="D, Philadelphia">D. Philadelphia</p> <BR>
+          </div>
+        <!--  D, Philadelphia  -->
+          <div>
+              <p>3.  Where was the Metric System developed?  </p>
+              <p><input type= "radio" name= "question3" value="A, Greece">A. Greece</p>
+              <p><input type= "radio" name= "question3" value="B, France">B. France</p>
+              <p><input type= "radio" name= "question3" value="C, Italy">C. Italy</p>
+              <p><input type= "radio" name= "question3" value="D, United States">D. United States</p> <BR>
+            </div>
+  <!--   B, France -->
+            <div>
+                <p>4. Who was the first person to orbit the Earth? </p>
+                <p><input type= "radio" name= "question4" value="A, Neil Armstrong">A. Neil Armstrong</p>
+                <p><input type= "radio" name= "question4" value="B, Yuri Gagarin">B. Yuri Gagarin</p>
+                <p><input type= "radio" name= "question4" value="C, Valentina Tereshkova">C. Valentina Tereshkova</p>
+                <p><input type= "radio" name= "question4" value="D, John Glenn">D. John Glenn</p> <BR>
+              </div>
+  <!--    B, Yuri Gagarin-->
+              <div>
+                  <p>5. Why did whalers hunt sperm whales?  </p>
+                  <p><input type= "radio" name= "question5" value="A, for oil">A. for oil</p>
+                  <p><input type= "radio" name= "question5" value="B, for sport">B. for sport</p>
+                  <p><input type= "radio" name= "question5" value="C, for skin">C. for skin</p>
+                  <p><input type= "radio" name= "question5" value="D, for meat">D. for meat</p> <BR>
+                </div>
+  <!--    A, for oil-->
+                <div>
+                    <p>6.  How many wives did Henry VIII have? </p>
+                    <p><input type= "radio" name= "question6" value="A, 1">A. 1</p>
+                    <p><input type= "radio" name= "question6" value="B, 6">B. 6</p>
+                    <p><input type= "radio" name= "question6" value="C, 2">C. 2</p>
+                    <p><input type= "radio" name= "question6" value="D, 3">D. 3</p> <BR>
+                  </div>
+  <!--    B, 6-->
+                  <div>
+                      <p> 7. Which event triggered World War One? </p>
+                      <p><input type= "radio" name= "question7" value="A, the tsar's refusal to an offer to visit Germany">A. the tsar's refusal to an offer to visit Germany</p>
+                      <p><input type= "radio" name= "question7" value="B, the assassination of Archduke Francis Ferdinand">B. the assassination of Archduke Francis Ferdinand</p>
+                      <p><input type= "radio" name= "question7" value="C, The sinking of Lusitania">C. The sinking of Lusitania</p>
+                      <p><input type= "radio" name= "question7" value="D, Germany's invasion of Poland">D. Germany's invasion of Poland</p> <BR>
+                    </div>
+  <!-- B, the assassination of Archduke Francis Ferdinand   -->
+                    <div>
+                        <p> 8. What was the Byzantine Empire? </p>
+                        <p><input type= "radio" name= "question8" value="A, The empire founded by Alexander the Great">A. The empire founded by Alexander the Great</p>
+                        <p><input type= "radio" name= "question8" value="B, An alliance ruled by the Pope">B. An alliance ruled by the Pope</p>
+                        <p><input type= "radio" name= "question8" value="C, A confederation of European tribes">C. A confederation of European tribes</p>
+                        <p><input type= "radio" name= "question8" value="D, A continuation of the Roman Empire">D. A continuation of the Roman Empire</p> <BR>
+                      </div>
+  <!--  D, A continuation of the Roman Empire  -->
+                      <div>
+                          <p> 9. Which of the following was NOT originally invented in China? </p>
+                          <p><input type= "radio" name= "question9" value="A, concrete">A. concrete</p>
+                          <p><input type= "radio" name= "question9" value="B, Paper money">B. Paper money</p>
+                          <p><input type= "radio" name= "question9" value="C, Silk">C. Silk</p>
+                          <p><input type= "radio" name= "question9" value="D, Gunpowder">D. Gunpowder</p> <BR>
+                        </div>
+  <!--       A, concrete-->
+                        <div>
+                            <p> 10.  When was the last time Moscow was ever captured by a foreign power? </p>
+                            <p><input type= "radio" name= "question10" value="A, by Napolean in 1812">A. by Napolean in 1812</p>
+                            <p><input type= "radio" name= "question10" value="B, by Ögedei Khan iin 1238">B. by Ögedei Khan iin 1238</p>
+                            <p><input type= "radio" name= "question10" value="C, by Hitler in 1942">C. by Hitler in 1942</p>
+                            <p><input type= "radio" name= "question10" value="D, never">D. never</p> <BR>
+                          </div>
+  <!-- A, by Napolean in 1812   -->
+
+
+  <div class="a">
+    <button class="b"  onclick="check4()"> Submit  </button>
+    </div>
+
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+ <a href="Index.html"  > Click here go to go back to the first page </a>
+ <BR>
+<!-- <a href="quizpage3.html"  > Click here go to go to the third page </a> -->
+</form>
+
+    </body>
+
+
+</html>

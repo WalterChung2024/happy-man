@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Pop quiz</title>
+    <p id="timer">5m 0s</p>
+
+    <script>
+
+    const timeInMinutes = 5;
+    const currentTime = Date.parse(new Date());
+    var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "TIME IS UP! Turn in your quiz!";
+      }
+    }, 1000);
+    </script>
+
+<script language="JavaScript" type="text/javascript" src="quiz.js">
+</script>
+  </head>
+  <h1 id="header2"> History True or False Quiz<h1>
+    <body bgcolor= #87CEFA>
+    <form name="quiz" id="quiz">
+
+      <div>
+          <p>1.  Most of French territory was, at one time, part of the Roman Empire. </p>
+          <p><input type= "radio" name= "question1" value="A, true">A. true</p>
+          <p><input type= "radio" name= "question1" value="B, false">B. false</p><BR>
+
+        </div>
+        <!--  A, true     -->
+
+        <div>
+            <p>2. India has never been involved in a war since becoming independent in 1947. </p>
+            <p><input type= "radio" name= "question2" value="A, true">A. true</p>
+            <p><input type= "radio" name= "question2" value="B, false">B. false</p><BR>
+
+          </div>
+          <!-- B, false      -->
+          <div>
+              <p>3.  The U.S. purchased Alaska from Russia. </p>
+              <p><input type= "radio" name= "question3" value="A, true">A. true</p>
+              <p><input type= "radio" name= "question3" value="B, false">B. false</p><BR>
+
+            </div>
+            <!--   A, true    -->
+            <div>
+                <p>4. Kamala Harris is the first woman to serve as Vice President. </p>
+                <p><input type= "radio" name= "question4" value="A, true">A. true</p>
+                <p><input type= "radio" name= "question4" value="B, false">B. false</p><BR>
+
+              </div>
+              <!--   A, true    -->
+              <div>
+                  <p>5. Richard Nixon was the first President to be impeached. </p>
+                  <p><input type= "radio" name= "question5" value="A, true">A. true</p>
+                  <p><input type= "radio" name= "question5" value="B, false">B. false</p><BR>
+
+                </div>
+                <!--    B, false   -->
+                <div>
+                    <p>6. There is an amendment to the Constitution which repeals a different amendment. </p>
+                    <p><input type= "radio" name= "question6" value="A, true">A. true</p>
+                    <p><input type= "radio" name= "question6" value="B, false">B. false</p><BR>
+
+                  </div>
+                  <!--  A, true     -->
+                  <div>
+                      <p>7. France helped the Americans gain independence from Great Britain. </p>
+                      <p><input type= "radio" name= "question7" value="A, true">A. true</p>
+                      <p><input type= "radio" name= "question7" value="B, false">B. false</p><BR>
+
+                    </div>
+                    <!--    A, true   -->
+                    <div>
+                        <p>8. The Soviet Union was the first country to launch a satellite into orbit.  </p>
+                        <p><input type= "radio" name= "question8" value="A, true">A. true</p>
+                        <p><input type= "radio" name= "question8" value="B, false">B. false</p><BR>
+
+                      </div>
+                      <!--  A, true     -->
+                      <div>
+                          <p>9. Henry Ford invented the automobile. </p>
+                          <p><input type= "radio" name= "question9" value="A, true">A. true</p>
+                          <p><input type= "radio" name= "question9" value="B, false">B. false</p><BR>
+
+                        </div>
+                        <!--  B, false     -->
+
+                        <div>
+                            <p>10. Abraham Lincoln was the first Republican to be elected President of the United States. </p>
+                            <p><input type= "radio" name= "question10" value="A, true">A. true</p>
+                            <p><input type= "radio" name= "question10" value="B, false">B. false</p><BR>
+
+                          </div>
+                          <!--   A, true    -->
+                          <div class="a">
+                            <button class="b"  onclick="check9()"> Submit  </button>
+                            </div>
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+   <a href="Index.html"  > Click here go to go back to the first page </a>
+   <BR>
+  <!-- <a href="quizpage3.html"  > Click here go to go to the third page </a> -->
+  </form>
+
+      </body>
+  </html>

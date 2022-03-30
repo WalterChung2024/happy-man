@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Pop quiz</title>
+    <p id="timer">5m 0s</p>
+
+    <script>
+
+    const timeInMinutes = 5;
+    const currentTime = Date.parse(new Date());
+    var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "TIME IS UP! Turn in your quiz!";
+      }
+    }, 1000);
+    </script>
+
+<script language="JavaScript" type="text/javascript" src="quiz.js">
+</script>
+  </head>
+  <h1 id="header2"> Geography True or False Quiz<h1>
+    <body bgcolor= #87CEFA>
+    <form name="quiz" id="quiz">
+
+      <div>
+          <p>1. Latitude is measured east and west of the prime meridian. </p>
+          <p><input type= "radio" name= "question1" value="A, true">A. true</p>
+          <p><input type= "radio" name= "question1" value="B, false">B. false</p> <BR>
+
+        </div>
+        <!--  B, false     -->
+
+        <div>
+            <p>2. The Antarctic Circle is located south of the equator. </p>
+            <p><input type= "radio" name= "question2" value="A, true">A. true</p>
+            <p><input type= "radio" name= "question2" value="B, false">B. false</p><BR>
+
+          </div>
+          <!--   A, true    -->
+          <div>
+              <p>3. The Mississippi River is the longest river in the world. </p>
+              <p><input type= "radio" name= "question3" value="A, true">A. true</p>
+              <p><input type= "radio" name= "question3" value="B, false">B. false</p><BR>
+
+            </div>
+            <!--   B, false   -->
+            <div>
+                <p>4. An area of land extending into a body of water and almost surrounded by water is a peninsula </p>
+                <p><input type= "radio" name= "question4" value="A, true">A. true</p>
+                <p><input type= "radio" name= "question4" value="B, false">B. false</p><BR>
+
+              </div>
+              <!--   A, true    -->
+              <div>
+                  <p>5. The Tropic of Cancer is located in the northern hemisphere. </p>
+                  <p><input type= "radio" name= "question5" value="A, true">A. true</p>
+                  <p><input type= "radio" name= "question5" value="B, false">B. false</p><BR>
+
+                </div>
+                <!--  A, true     -->
+                <div>
+                    <p>6. Longitude lines, or meridians, measure distances north and south.</p>
+                    <p><input type= "radio" name= "question6" value="A, true">A. true</p>
+                    <p><input type= "radio" name= "question6" value="B, false">B. false</p><BR>
+
+                  </div>
+                  <!--   B, false    -->
+                  <div>
+                      <p>7. The three countries with the largest landarea in the world are Russia, Canada, and the United States. </p>
+                      <p><input type= "radio" name= "question7" value="A, true">A. true</p>
+                      <p><input type= "radio" name= "question7" value="B, false">B. false</p><BR>
+
+                    </div>
+                    <!--  B, false     -->
+                    <div>
+                        <p>8. The Great Lakes, which border Canadaand the United States, are Ontario, Huron, Erie, and Superior. </p>
+                        <p><input type= "radio" name= "question8" value="A, true">A. true</p>
+                        <p><input type= "radio" name= "question8" value="B, false">B. false</p><BR>
+
+                      </div>
+                      <!--   A, true    -->
+                      <div>
+                          <p>9. The largest lake in the world is the Caspian Sea.</p>
+                          <p><input type= "radio" name= "question9" value="A, true">A. true</p>
+                          <p><input type= "radio" name= "question9" value="B, false">B. false</p><BR>
+
+                        </div>
+                        <!--  A, true     -->
+
+                        <div>
+                            <p>10.The Indian Ocean is the third largest ocean in the world.  </p>
+                            <p><input type= "radio" name= "question10" value="A, true">A. true</p>
+                            <p><input type= "radio" name= "question10" value="B, false">B. false</p><BR>
+                          </div>
+                          <!--   A, true    -->
+                          <div class="a">
+                            <button class="b"  onclick="check6()"> Submit  </button>
+                            </div>
+
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+   <a href="Index.html"  > Click here go to go back to the first page </a>
+   <BR>
+  <!-- <a href="quizpage3.html"  > Click here go to go to the third page </a> -->
+  </form>
+
+      </body>
+  </html>
